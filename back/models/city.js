@@ -1,11 +1,8 @@
-var mongoose = require('mongoose'),  
-    Schema   = mongoose.Schema;
+var mongoose = require('mongoose');
 
-var citySchema = new Schema({  
-  name:    { type: String },
-  population:     { type: Number },
-  total_spots:  { type: Number },
-  free_spots:   { type: Number }
+var citySchema = mongoose.Schema({
+    name: String,
+    population: Number
 });
 
-module.exports = mongoose.model('City', citySchema); 
+module.exports = mongoose.model('City', citySchema);
