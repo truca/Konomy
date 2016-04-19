@@ -24,8 +24,8 @@ var Sidebar = React.createClass({
   },
   componentDidMount(){
     var self = this;
-    socket.emit('get cities', null)
-    socket.on('return cities', function(cities){
+    socket.emit('get all city', null)
+    socket.on('return all city', function(cities){
       self.setState({cities: cities});
       console.log(cities)
     });
